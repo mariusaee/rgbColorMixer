@@ -14,16 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
-    // MARK:- Sliders
+    // MARK:- IBOutlets
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
-    
-    // MARK:- Colored View
     @IBOutlet var coloredView: UIView!
     
+    // MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        redSlider.tintColor = .red
+        greenSlider.tintColor = .green
+        blueSlider.tintColor = .blue
         
         fillRedLabel()
         fillGreenLabel()
@@ -50,7 +52,13 @@ class ViewController: UIViewController {
     
     // MARK:- Methods
     func colorMyView() {
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        let redColor = CGFloat(redSlider.value)
+        let greenColor = CGFloat(greenSlider.value)
+        let blueColor = CGFloat(blueSlider.value)
+        coloredView.backgroundColor = UIColor(red: redColor,
+                                              green: greenColor,
+                                              blue: blueColor,
+                                              alpha: 1)
     }
     func fillRedLabel() {
         redLabel.text = String(format: "%.2f", redSlider.value)
