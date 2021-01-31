@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     // MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         redSlider.tintColor = .red
         greenSlider.tintColor = .green
         blueSlider.tintColor = .blue
@@ -55,6 +56,7 @@ class ViewController: UIViewController {
         let redColor = CGFloat(redSlider.value)
         let greenColor = CGFloat(greenSlider.value)
         let blueColor = CGFloat(blueSlider.value)
+        
         coloredView.backgroundColor = UIColor(red: redColor,
                                               green: greenColor,
                                               blue: blueColor,
