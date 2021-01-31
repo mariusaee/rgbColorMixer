@@ -8,43 +8,58 @@
 import UIKit
 
 class ViewController: UIViewController {
-    // Labels
+  
+    // MARK:- Labels
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
-    
-    // Sliders
+    // MARK:- Sliders
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    // MARK:- Colored View
     @IBOutlet var coloredView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        redLabel.text = String(format: "%.2f", redSlider.value)
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
-        blueLabel.text = String(format: "%.2f", blueSlider.value)
+        
+        fillRedLabel()
+        fillGreenLabel()
+        fillBLueLabel()
         
         coloredView.layer.cornerRadius = 20
         
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        colorMyView()
     }
     
+    // MARK:- Sliders Action
     @IBAction func redSliderAction() {
-        redLabel.text = String(format: "%.2f", redSlider.value)
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        fillRedLabel()
+        colorMyView()
+    }
+    @IBAction func greenSliderAction() {
+        fillGreenLabel()
+        colorMyView()
+    }
+    @IBAction func blueSliderAction() {
+        fillBLueLabel()
+        colorMyView()
     }
     
-    @IBAction func greenSliderAction() {
-        greenLabel.text = String(format: "%.2f", greenSlider.value)
+    // MARK:- Methods
+    func colorMyView() {
         coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
-
-    @IBAction func blueSliderAction() {
+    func fillRedLabel() {
+        redLabel.text = String(format: "%.2f", redSlider.value)
+    }
+    func fillGreenLabel() {
+        greenLabel.text = String(format: "%.2f", greenSlider.value)
+    }
+    func fillBLueLabel() {
         blueLabel.text = String(format: "%.2f", blueSlider.value)
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
 }
 

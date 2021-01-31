@@ -35,7 +35,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3o-No-E1W">
                                 <rect key="frame" x="91" y="386" width="40" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="wey-cs-ZxI"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="wey-cs-ZxI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -59,7 +59,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmW-dk-DGP">
                                 <rect key="frame" x="91" y="426.5" width="40" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="Ui1-Zg-rhv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Ui1-Zg-rhv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -83,7 +83,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFK-gg-7Vc">
                                 <rect key="frame" x="91" y="467" width="40" height="20.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="Tze-5t-LqC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Tze-5t-LqC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
