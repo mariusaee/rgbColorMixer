@@ -9,15 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
   
-    // MARK:- Labels
+    // MARK:- IBOutlets
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
     @IBOutlet var blueLabel: UILabel!
     
-    // MARK:- IBOutlets
     @IBOutlet var redSlider: UISlider!
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
+    
     @IBOutlet var coloredView: UIView!
     
     // MARK:- viewDidLoad
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     }
     
     // MARK:- Methods
-    func colorMyView() {
+    private func colorMyView() {
         let redColor = CGFloat(redSlider.value)
         let greenColor = CGFloat(greenSlider.value)
         let blueColor = CGFloat(blueSlider.value)
