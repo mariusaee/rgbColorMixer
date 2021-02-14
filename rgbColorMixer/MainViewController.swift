@@ -21,5 +21,10 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
     }
-    
+}
+
+extension MainViewController: SettingsViewControllerDelegate {
+    func setNewValue(for backgroundColor: UIColor) {
+        super.view.backgroundColor = backgroundColor
+    }
 }
