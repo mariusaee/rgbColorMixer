@@ -139,7 +139,7 @@
                                     <color key="titleColor" red="0.98993748429999995" green="0.37789058689999999" blue="0.038164537399999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2xg-e1-lfb"/>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="2xg-e1-lfb"/>
                                 </connections>
                             </button>
                         </subviews>

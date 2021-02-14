@@ -20,6 +20,8 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet var coloredView: UIView!
     
+    var delegate: SettingsViewControllerDelegate!
+        
     // MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +71,9 @@ class SettingsViewController: UIViewController {
         blueLabel.text = String(format: "%.2f", blueSlider.value)
     }
     
-    @IBAction func doneButton() {
+    @IBAction func doneButtonPressed() {
+        guard let newBackgroundColor = coloredView.backgroundColor else { return }
+        delegate.setNewValue(for: newBackgroundColor)
         dismiss(animated: true)
     }
     
