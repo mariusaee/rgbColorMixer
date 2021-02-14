@@ -50,7 +50,7 @@ class SettingsViewController: UIViewController {
         colorMyView()
     }
     
-    // MARK:- Methods
+    // MARK:- Private Methods
     private func colorMyView() {
         coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                               green: CGFloat(greenSlider.value),
