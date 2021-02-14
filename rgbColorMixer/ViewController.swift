@@ -24,16 +24,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        coloredView.layer.cornerRadius = 20
+
         redSlider.tintColor = .red
         greenSlider.tintColor = .green
-        blueSlider.tintColor = .blue
         
         fillRedLabel()
         fillGreenLabel()
         fillBLueLabel()
-        
-        coloredView.layer.cornerRadius = 20
-        
+                
         colorMyView()
     }
     
@@ -53,24 +52,28 @@ class ViewController: UIViewController {
     
     // MARK:- Methods
     private func colorMyView() {
-        let redColor = CGFloat(redSlider.value)
-        let greenColor = CGFloat(greenSlider.value)
-        let blueColor = CGFloat(blueSlider.value)
-        
-        coloredView.backgroundColor = UIColor(red: redColor,
-                                              green: greenColor,
-                                              blue: blueColor,
+        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+                                              green: CGFloat(greenSlider.value),
+                                              blue: CGFloat(blueSlider.value),
                                               alpha: 1)
     }
-    func fillRedLabel() {
+    private func fillRedLabel() {
         redLabel.text = String(format: "%.2f", redSlider.value)
     }
-    func fillGreenLabel() {
+    
+    private func fillGreenLabel() {
         greenLabel.text = String(format: "%.2f", greenSlider.value)
     }
-    func fillBLueLabel() {
+    
+    private func fillBLueLabel() {
         blueLabel.text = String(format: "%.2f", blueSlider.value)
     }
+    
+    @IBAction func doneButton() {
+        dismiss(animated: true)
+    }
+    
+    
 }
 
 
